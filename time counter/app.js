@@ -46,6 +46,7 @@ start.addEventListener("click",()=>{
 
 stop.addEventListener("click",()=>{
     clearInterval(starttimer)
+    abort()
 })
 
 reset.addEventListener("click",()=>{
@@ -55,6 +56,7 @@ reset.addEventListener("click",()=>{
     sec=originalsec
     displaytime()
     clearInterval(starttimer)
+    abort()
 
         
 
