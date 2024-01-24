@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <div class="formdiv">
+        <div class="intro">
+            <h1>TIME COUNTER</h1>
+            <p>Welcome to our innovative time management platform! Experience seamless control over your countdowns with our user-friendly time counter website. Set, start, stop, and reset timers effortlessly, empowering you to manage your time with precision and ease.</p>
+        </div>
+        <form action="">
+            <input type="number" min="0" placeholder="DAYS" name="days" id="days">
+            <input type="number" min="0" placeholder="HOURS(0 - 23)" name="hrs" id="hrs">
+            <input type="number" min="0" placeholder="MINUTES(0 - 59)" name="min" id="min">
+            <input type="number" min="0" placeholder="SECONDS(0 - 59)" name="sec" id="sec">
+            <button type="submit" class="addcounterbtn">
+                <span href="#" class="btn2"><span class="spn2">START TIMER </span></span>
+            </button>        
+        </form>
+    </div>
+
+    
+        <div class="timer">
+            <div class="completedmsg">
+            </div>
+            <h1 class="display">00:00:00:00</h1>
+            <div class="btngroup">
+                <button class="start">
+                    <span class="btn2"><span class="spn2">START</span></span>
+                </button>
+                <button class="stop">
+                    <span class="btn2"><span class="spn2">STOP</span></span>
+                </button>
+                <button class="reset">
+                    <span href="#" class="btn2"><span class="spn2">RESET</span></span>
+                </button>
+            </div>
+        </div>
+   
+    
+
+    
+    
+
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

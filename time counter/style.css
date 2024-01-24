@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Permanent+Marker&display=swap');
+*{
+    font-family: 'Lilita One', sans-serif;
+}
+
+
+.formdiv{
+    background-image: url("./assests/forest-5855196.jpg");
+    background-position: center;
+    background-size: cover;
+    min-width:300px;
+    max-width: fit-content;
+    height: fit-content;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.intro{
+    padding: 10px;
+    margin-right: 20px;
+    color: white;
+}
+
+.intro>h1{
+    font-size: 100px;
+    text-align: center;
+    margin-top: 0%;
+    -webkit-text-stroke:2px white;
+    color: transparent;
+
+}
+form{
+    width: fit-content;
+    height: fit-content;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+    box-shadow: 2px 2px 5px black;
+
+}
+.formdiv>form>input{
+    width: 500px;
+    height: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.addcounterbtn{
+
+    margin-top: 20px;
+}
+
+
+
+
+/*  timer */
+
+
+
+.timer{
+    text-align: center;
+    font-size: 50px;
+    min-height: 350px;
+    min-width: 60vw;
+    max-width: 75vw;
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    background-color: white;
+    margin-bottom: 25px;
+    mix-blend-mode: multiply;
+    border-radius: 15px;
+}
+
+.completedmsg{
+    display: none;
+    height: 400px;
+    width: 100%;
+    background-image: url("./assests/12953798_Jan-Success_1.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: all 2s;
+}
+
+.display{
+    color: black;
+    transition: all 2s;
+    margin-bottom: 25px;
+
+}
+
+
+
+
+
+/*  animated input */
+
+
+.btn2 {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #000000;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+  
+  .btn2::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - -2px);
+    background-color: black;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 50px);
+    background-color: black;
+    transition: 0.3s ease-out;
+    transform: scaleY(1);
+  }
+  
+  .btn2:hover::before {
+    transform: translateY(-25px);
+    height: 0;
+    color: black;
+  }
+  
+  .btn2:hover::after {
+    transform: scaleX(0);
+    transition-delay: 0.15s;
+    color: black;
+
+  }
+  
+  .btn2:hover {
+    border: 2px solid black;
+    color: black;
+
+  }
+  
+  .btn2 span {
+    position: relative;
+    z-index: 3;
+  }
+  
+  button {
+    text-decoration: none;
+    border: none;
+    background-color: transparent;
+  }
