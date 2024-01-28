@@ -101,7 +101,7 @@ function reduce(){
 
 
 function starttimercount(){
-    starttimer=setInterval(run,1250)    
+    starttimer=setInterval(run,1375)    
 }
 
 // stop timer
