@@ -95,13 +95,14 @@ function reduce(){
             sec=60
         }
    }
+
  
    sec-=1
 }
 
 
 function starttimercount(){
-    starttimer=setInterval(run,1375)    
+    starttimer=setInterval(run,1400)    
 }
 
 // stop timer
