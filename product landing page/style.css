@@ -1,0 +1,139 @@
+@media screen and (width>700px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    body{
+        padding: 0%;
+        margin: 0%;
+    }
+    .navbar{
+        position: static;
+        margin: 0;
+        overflow: auto;
+        background: #000;
+        padding: 10px 0 10px 0;
+        position: static;
+        width: 100vw;
+    }
+   
+    .navbar>ul{
+        display: flex;
+        justify-content: space-evenly;
+
+
+    }
+    .navbar li>a{
+        text-decoration: none;
+        font-size: 20px;
+        color: white;
+    }
+    .navbar li{
+        list-style: none;
+    }
+
+    .navbar a:hover{
+        text-decoration: underline;
+    }
+
+    /* --------------------intro------------------ */
+    .intro{
+        width: 100vw;
+        height: 65vh;
+        background-image: url("./assests/bgimg2.jpg");
+        background-position: center;
+        background-size: cover;
+        background-clip: text;
+    }
+    
+    
+    .intro h1{
+        text-align: center;
+        margin-top: 5%;
+        font-size: 130px;
+        color: rgb(146, 183, 206);
+       animation-name: fromleft;
+       animation-duration:4s;
+       transition: all 4s;
+    }
+    .intro h2{
+        text-align: center;
+        margin-top: 2%;
+        font-size: 70px;
+        color: rgb(146, 183, 206);
+        animation-name: fromright;
+        animation-duration:4s;
+        transition: all 4s;
+    }
+
+    @keyframes fromleft {
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+        
+    }
+    @keyframes fromright {
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+
+    /* carousel */
+   
+      
+      @keyframes scroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(calc(-250px * 7));
+        }
+      }
+      
+      .slider {
+        background: white;
+        box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+        height: 100px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
+        width: 100vw;
+      }
+      
+      .slider::before,
+      .slider::after {
+        content: "";
+        height: 100px;
+        position: absolute;
+        width: 200px;
+        z-index: 2;
+      }
+      
+      .slider::after {
+        right: 0;
+        top: 0;
+        transform: rotateZ(180deg);
+      }
+      
+      .slider::before {
+        left: 0;
+        top: 0;
+      }
+      
+      .slider .slide-track {
+        animation: scroll 40s linear infinite;
+        display: flex;
+        width: calc(250px * 14);
+      }
+      
+      .slider .slide {
+        height: 100px;
+        width: 250px;
+      }
+}
