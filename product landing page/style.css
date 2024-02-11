@@ -471,12 +471,11 @@ html{
       color: rgba(175, 177, 181, 0.926);
       filter: drop-shadow(2px 2px 2px 2px black);
     }
-    
     .intro4 h1>span:nth-child(1){
       display: inline-block;
       animation-name: updown;
       animation-duration: 1s;
-      animation-delay: 0s;
+      animation-delay: 0s; 
       animation-iteration-count: infinite;
     }
     .intro4 h1>span:nth-child(2){
