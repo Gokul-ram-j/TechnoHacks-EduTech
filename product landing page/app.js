@@ -13,6 +13,7 @@ let gaming_headphones_img_src=["https://cdn.shopify.com/s/files/1/0057/8938/4802
 
 let allSpec=["13mm drivers","IWP Technology","clear calling","Asap Charge","BEAST Mode","Smart touch control","ENx Technology","Bluetooth v5.3","IPX7 Water Resistance"]
 let highlighted_specs=["upto 60HRS playback","upto 40HRS playback","upto 14HRS playback"]
+let wiredHeadset_highlighted_spec=["In-Line Microphone","Noise Isolation","3.5mm Angled Jack"]
 // product names
 let name_list1=["Airdopes 131","Airdopes 121 v2","Airdopes 131 Pro","Airdopes 381","Airdopes 115","Airdopes Atom 83","Airdopes 161 Pro","Immortal 131","Airdopes Alpha","Airdopes 441","Airdopes 131 ANC","Airdopes 181 Pro"]
 let name_list2=["Batman Airdopes 115","Black panther Airdopes 121 Pro","Ironman Airdopes 121 Pro","Wonder Women Airdopes Alpha"]
@@ -186,7 +187,7 @@ for(src of wired_earphones_img_src){
       }
 
   }
-  const highlighted_spec = highlighted_specs[Math.floor(Math.random() * highlighted_specs.length)];
+  const highlighted_spec = wiredHeadset_highlighted_spec[Math.floor(Math.random() * wiredHeadset_highlighted_spec.length)];
   const rating_star = Math.floor(Math.random() * 5);
   const verified_user =Math.floor(Math.random() * 1000);
   const actual_price = Math.round(Math.random() * (3000 - 2000) + 2000);
