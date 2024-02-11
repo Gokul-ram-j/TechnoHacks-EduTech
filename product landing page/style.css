@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Protest+Riot&display=swap');
 
+html{
+  scroll-behavior: smooth;
+}
 
 @media screen and (width>500px){
     :root{
@@ -45,6 +48,22 @@
     .navbar a:hover{
         text-decoration: underline;
     }
+
+    .dropdown{
+      color: white;
+      position: absolute;
+      padding: 15px 30px 15px 30px;
+      background: black;
+      width: 150px;
+      left: 32%;
+      text-align: center;
+      display: none;
+    }
+    .dropdown li{
+      margin-top: 5px;
+    }
+
+    
 
     /* --------------------intro------------------ */
     .intro{
@@ -129,7 +148,6 @@
         overflow: hidden;
         position: relative;
         width: 100vw;
-        margin-bottom: 25px;
       }
       
       .slider::before,
@@ -165,9 +183,40 @@
       }
 
     /* product container 1 */
-    .title{
+    .intro1{
+      width: 99vw;
+      height: 100vh;
+      background-image: url("./assests/wirelessstereobg.jpg");
+      background-position: center;
+      background-size: cover;
       text-align: center;
+      overflow: auto;
     }
+
+    .intro1 h1{
+      font-size: 75px;
+      width: 70%;
+      margin: auto;
+      background-image: url("./assests/wirelessstereobg.jpg");
+      background-clip: text;
+      color: rgba(240, 241, 242, 0.693);
+      margin-top: 10%;
+      background-position: center;
+      background-size: cover;
+    }
+    .intro1 p{
+      font-weight: bolder;
+      width: 70%;
+      margin: auto;
+      background: url("./assests/wirelessstereobg.jpg");
+      background-clip: text;
+      color: rgba(240, 241, 242, 0.693);
+      background-position: center;
+      background-size: cover;
+    }
+
+    
+    
     .product-container1, .product-container2, .product-container3, .product-container4{
       margin: auto;
       margin-top: 5%;
@@ -277,7 +326,7 @@
       margin-top: 0%;
       border-top: 2px solid white;
       position: absolute;
-      top: 93%;
+      top: 92.5%;
       border-radius: 0px 0px 10px 10px;
     }
 

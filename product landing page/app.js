@@ -11,8 +11,14 @@ let gaming_headphones_img_src=["https://cdn.shopify.com/s/files/1/0057/8938/4802
 "https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal_200.psb.jpg?v=1699501201","https://cdn.shopify.com/s/files/1/0057/8938/4802/files/Immortal_300.webp?v=1700806009"]
 // product details
 
-let allSpec=["13mm drivers","IWP Technology","clear calling","Asap Charge","BEAST Mode","Smart touch control","ENx Technology","Bluetooth v5.3","IPX7 Water Resistance","upto 40HRS playback",]
-
+let allSpec=["13mm drivers","IWP Technology","clear calling","Asap Charge","BEAST Mode","Smart touch control","ENx Technology","Bluetooth v5.3","IPX7 Water Resistance"]
+let highlighted_specs=["upto 60HRS playback","upto 40HRS playback","upto 14HRS playback"]
+// product names
+let name_list1=["Airdopes 131","Airdopes 121 v2","Airdopes 131 Pro","Airdopes 381","Airdopes 115","Airdopes Atom 83","Airdopes 161 Pro","Immortal 131","Airdopes Alpha","Airdopes 441","Airdopes 131 ANC","Airdopes 181 Pro"]
+let name_list2=["Batman Airdopes 115","Black panther Airdopes 121 Pro","Ironman Airdopes 121 Pro","Wonder Women Airdopes Alpha"]
+let name_list3=["Bassheads 104","Bassheads 100","Bassheads 228","Bassheads 225","Bassheads 152","Bassheads 220","Bassheads 220 MKI","Bassheads 192"]
+let name_list4=["Immortal 400","Immortal 920","Immortal 700","Immortal 120 Pro","Immortal 1000","Immortal 200"]
+let name_count=0;
 let carousel_elem_container=document.querySelector(".slide-track")
 for(i=1;i<=10;i++){
     let carousel_elem=`
@@ -25,10 +31,19 @@ for(i=1;i<=10;i++){
 
 for(src of product_img_src_link){
     let specs=[]
-    for(i=0;i<4;i++){
+    let scount=0
+    while(scount<=4){
         const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
-        specs.push(spec)
+        if(specs.includes(spec)){
+          continue
+        }
+        else{
+          specs.push(spec)
+          scount+=1
+        }
+
     }
+    const highlighted_spec = highlighted_specs[Math.floor(Math.random() * highlighted_specs.length)];
     const rating_star = Math.floor(Math.random() * 5);
     const verified_user =Math.floor(Math.random() * 1000);
     const actual_price = Math.round(Math.random() * (2500 - 1000) + 1000);
@@ -47,7 +62,7 @@ for(src of product_img_src_link){
         </div>
         <div class="item-img">
           <img src=${src} alt="" >
-          <p>60 Hours Playback</p>
+          <p>${highlighted_spec}</p>
         </div>
         <div class="item-context">
           <div class="detail1">
@@ -57,7 +72,7 @@ for(src of product_img_src_link){
             <p>${verified_user}</p>
            
           </div>
-          <h1>Airdopes 381</h1>
+          <h1>${name_list1[name_count]}</h1>
           <div class="detail2">
             <p>${specs[0]}</p>
             <p>${specs[1]}</p>
@@ -71,6 +86,7 @@ for(src of product_img_src_link){
           </div>
           `
           document.querySelector(".product-container1").innerHTML+=product_elem
+          name_count+=1
           // <h2><span class="offerpercentage">${discount} off</span></h2>
 }
 
@@ -90,17 +106,26 @@ function showoption(elem){
 }
 
 
-
+name_count=0
 // superhero tws
 for(src of superhero_collection_product_img_src_link){
   let specs=[]
-  for(i=0;i<4;i++){
-      const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
-      specs.push(spec)
-  }
+  let scount=0
+    while(scount<=4){
+        const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
+        if(specs.includes(spec)){
+          continue
+        }
+        else{
+          specs.push(spec)
+          scount+=1
+        }
+
+    }
+  const highlighted_spec = highlighted_specs[Math.floor(Math.random() * highlighted_specs.length)];
   const rating_star = Math.floor(Math.random() * 5);
   const verified_user =Math.floor(Math.random() * 1000);
-  const actual_price = Math.round(Math.random() * (2500 - 1000) + 1000);
+  const actual_price = Math.round(Math.random() * (3000 - 2000) + 2000);
   const discounted_price = Math.round(Math.random() * (1500 - 1000) + 1000);
   // const discount=(Math.round(((actual_price - discounted_price)/discounted_price)*100))
   // console.log(specs,rating_star,verified_user,actual_price,discounted_price,discount,src)
@@ -116,7 +141,7 @@ for(src of superhero_collection_product_img_src_link){
       </div>
       <div class="item-img">
         <img src=${src} alt="" >
-        <p>60 Hours Playback</p>
+        <p>${highlighted_spec}</p>
       </div>
       <div class="item-context">
         <div class="detail1">
@@ -126,7 +151,7 @@ for(src of superhero_collection_product_img_src_link){
           <p>${verified_user}</p>
          
         </div>
-        <h1>Airdopes 381</h1>
+        <marquee><h1>${name_list2[name_count]}</h1></marquee>
         <div class="detail2">
           <p>${specs[0]}</p>
           <p>${specs[1]}</p>
@@ -140,19 +165,31 @@ for(src of superhero_collection_product_img_src_link){
         </div>
         `
         document.querySelector(".product-container2").innerHTML+=product_elem
+        name_count+=1
         // <h2><span class="offerpercentage">${discount} off</span></h2>
 }
 
+
+name_count=0
 // wired headphones
 for(src of wired_earphones_img_src){
   let specs=[]
-  for(i=0;i<4;i++){
+  let scount=0
+  while(scount<=4){
       const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
-      specs.push(spec)
+      if(specs.includes(spec)){
+        continue
+      }
+      else{
+        specs.push(spec)
+        scount+=1
+      }
+
   }
+  const highlighted_spec = highlighted_specs[Math.floor(Math.random() * highlighted_specs.length)];
   const rating_star = Math.floor(Math.random() * 5);
   const verified_user =Math.floor(Math.random() * 1000);
-  const actual_price = Math.round(Math.random() * (2500 - 1000) + 1000);
+  const actual_price = Math.round(Math.random() * (3000 - 2000) + 2000);
   const discounted_price = Math.round(Math.random() * (1500 - 1000) + 1000);
   // const discount=(Math.round(((actual_price - discounted_price)/discounted_price)*100))
   // console.log(specs,rating_star,verified_user,actual_price,discounted_price,discount,src)
@@ -168,7 +205,7 @@ for(src of wired_earphones_img_src){
       </div>
       <div class="item-img">
         <img src=${src} alt="" >
-        <p>60 Hours Playback</p>
+        <p>${highlighted_spec}</p>
       </div>
       <div class="item-context">
         <div class="detail1">
@@ -178,7 +215,7 @@ for(src of wired_earphones_img_src){
           <p>${verified_user}</p>
          
         </div>
-        <h1>Airdopes 381</h1>
+        <h1>${name_list3[name_count]}</h1>
         <div class="detail2">
           <p>${specs[0]}</p>
           <p>${specs[1]}</p>
@@ -192,21 +229,31 @@ for(src of wired_earphones_img_src){
         </div>
         `
         document.querySelector(".product-container3").innerHTML+=product_elem
+        name_count+=1
         // <h2><span class="offerpercentage">${discount} off</span></h2>
 }
 
 
 // gaming headphones
-
+name_count=0
 for(src of gaming_headphones_img_src){
   let specs=[]
-  for(i=0;i<4;i++){
-      const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
-      specs.push(spec)
-  }
+  let scount=0
+    while(scount<=4){
+        const spec = allSpec[Math.floor(Math.random() * allSpec.length)];
+        if(specs.includes(spec)){
+          continue
+        }
+        else{
+          specs.push(spec)
+          scount+=1
+        }
+
+    }
+  const highlighted_spec = highlighted_specs[Math.floor(Math.random() * highlighted_specs.length)];
   const rating_star = Math.floor(Math.random() * 5);
   const verified_user =Math.floor(Math.random() * 1000);
-  const actual_price = Math.round(Math.random() * (2500 - 1000) + 1000);
+  const actual_price = Math.round(Math.random() * (3000 - 2000) + 2000);
   const discounted_price = Math.round(Math.random() * (1500 - 1000) + 1000);
   // const discount=(Math.round(((actual_price - discounted_price)/discounted_price)*100))
   // console.log(specs,rating_star,verified_user,actual_price,discounted_price,discount,src)
@@ -222,7 +269,7 @@ for(src of gaming_headphones_img_src){
       </div>
       <div class="item-img">
         <img src=${src} alt="" >
-        <p>60 Hours Playback</p>
+        <p>${highlighted_spec}</p>
       </div>
       <div class="item-context">
         <div class="detail1">
@@ -232,7 +279,7 @@ for(src of gaming_headphones_img_src){
           <p>${verified_user}</p>
          
         </div>
-        <h1>Airdopes 381</h1>
+        <h1>${name_list4[name_count]}</h1>
         <div class="detail2">
           <p>${specs[0]}</p>
           <p>${specs[1]}</p>
@@ -246,8 +293,23 @@ for(src of gaming_headphones_img_src){
         </div>
         `
         document.querySelector(".product-container4").innerHTML+=product_elem
+        name_count+=1
         // <h2><span class="offerpercentage">${discount} off</span></h2>
 }
+
+document.querySelector(".dropdownbtn").addEventListener("click",()=>{
+  let dropdown=document.querySelector(".dropdown")
+  if(dropdown.classList.contains("closed")){
+    dropdown.classList.add("opened")
+    dropdown.classList.remove("closed")
+    dropdown.style.display="block"
+  }
+  else{
+    dropdown.style.display="none"
+    dropdown.classList.remove("opened")
+    dropdown.classList.add("closed")
+  }
+})
 
 
 
