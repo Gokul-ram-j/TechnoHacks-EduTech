@@ -97,13 +97,15 @@ function displayAllcountry(data_list,from,to){
     
       let elem=
       `
-      <div class="detail">
-              <img src="https://flagsapi.com/${flag_img}/flat/64.png" alt="${country}">
-              <p>${country.toUpperCase()}</p>
-              <p>1${" "+from}</p>
-              <p>=</p> 
-              <p>${data_list[country_details[country]["currency"]]!=undefined?data_list[country_details[country]["currency"]]:"NA"}${" "+country_details[country]["currency"]}</p>
-        </div>
+      <div class="col-sm-4 col-md-6 col-lg-2">
+        <div class="detail">
+                <img src="https://flagsapi.com/${flag_img}/flat/64.png" alt="${country}">
+                <p>${country.toUpperCase()}</p>
+                <p>1${" "+from}</p>
+                <p>=</p> 
+                <p>${data_list[country_details[country]["currency"]]!=undefined?data_list[country_details[country]["currency"]]:"NA"}${" "+country_details[country]["currency"]}</p>
+          </div>
+      </div>
       `
       container.innerHTML+=elem
     
